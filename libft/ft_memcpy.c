@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:19:15 by lulm              #+#    #+#             */
-/*   Updated: 2023/10/25 15:26:42 by lulm             ###   ########.fr       */
+/*   Updated: 2023/10/27 13:12:24 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
-	char	*u;
-
-	i = 1;
-	u = s;
-	while(i < n)
+	if(dest == src)
 	{
-		*u++ = c;
-		i++;
+		return(dest);
 	}
-	return(s);
 }
