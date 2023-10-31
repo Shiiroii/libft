@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 13:08:24 by lulm              #+#    #+#             */
-/*   Updated: 2023/10/31 13:27:13 by lulm             ###   ########.fr       */
+/*   Created: 2023/10/31 14:09:48 by lulm              #+#    #+#             */
+/*   Updated: 2023/10/31 14:11:37 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	int		i;
-	char	*u;
+	int	resultat;
+	int	i;
+	int	u;
 
+	resultat = 0;
+	u = 0;
 	i = 1;
-	u = s;
-	while (i < n)
+	while ((nptr[u] == 32) || (nptr[u] >= 9 && nptr[u] <= 13))
 	{
-		*u++ = c;
-		i++;
+		u++;
 	}
-	return (s);
+	while ((nptr[u] == '-') || (nptr[u] == '+'))
+	{
+		if (nptr[u] == '-')
+			i *= -1;
+		u++;
+	}
+	while (nptr[u] && nptr[u] >= '0' && nptr[u] <= '9')
+	{
+		resultat *= 10;
+		resultat += nptr[u] - '0';
+		u++;
+	}
+	resultat *= i;
+	return (resultat);
 }

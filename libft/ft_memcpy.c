@@ -6,16 +6,27 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:19:15 by lulm              #+#    #+#             */
-/*   Updated: 2023/10/27 13:12:24 by lulm             ###   ########.fr       */
+/*   Updated: 2023/10/31 13:54:03 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if(dest == src)
+	int		i;
+	char	*cdest;
+	char	*csrc;
+
+	i = 0;
+	if (dest == src)
 	{
-		return(dest);
+		return (dest);
 	}
+	cdest = (char *)dest;
+	csrc = (char *)src;
+	while (i < n)
+	{
+		cdest[i] = csrc[i];
+		i++;
+	}
+	return (dest);
 }
