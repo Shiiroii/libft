@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:04:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/03 13:24:05 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/03 13:45:58 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*pdest;
 	const unsigned char	*psrc;
 
-	pdest = (unsigned char*)dest;
-	psrc = (unsigned char*)src;
+	pdest = (unsigned char *)dest;
+	psrc = (unsigned char *)src;
 	i = 0;
 	if (!dest && !src)
 	{
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	if (pdest > psrc)
 	{
-		return(ft_memcpy(dest, src, n));
+		return (ft_memcpy(dest, src, n));
 	}
 	else
 	{
