@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:04:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/03 13:23:12 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/03 13:24:05 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		return (NULL);
 	}
-	if(pdest > psrc)
+	if (pdest > psrc)
 	{
 		return(ft_memcpy(dest, src, n));
 	}
