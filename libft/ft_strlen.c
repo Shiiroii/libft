@@ -6,11 +6,11 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:30:31 by lulm              #+#    #+#             */
-/*   Updated: 2023/10/21 17:04:11 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/03 12:18:31 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
