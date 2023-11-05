@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:12:53 by lulm              #+#    #+#             */
-/*   Updated: 2023/10/31 14:11:51 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/05 14:32:57 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlen(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *nptr);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+int 	ft_toupper(int c);
+int		ft_tolower(int c);
 
 #endif

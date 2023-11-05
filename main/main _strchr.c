@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   main _strchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 14:04:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/05 14:13:33 by lulm             ###   ########.fr       */
+/*   Created: 2023/11/05 15:09:14 by lulm              #+#    #+#             */
+/*   Updated: 2023/11/05 15:24:04 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	main(void)
 {
-	int					i;
-	unsigned char		*pdest;
-	const unsigned char	*psrc;
+	char	*test;
+	char	*teststrchr;
+	char	chaine[] = "abcdefg";
 
-
-	pdest = (unsigned char *)dest;
-	psrc = (unsigned char *)src;
-	i = 0;
-	if (!dest || !src)
+	test = strchr(chaine, 'c');
+	teststrchr = ft_strchr(chaine, 'c');
+	if (test != NULL)
 	{
-		return (NULL);
+		printf("test = %s\n", test);
+		printf ("teststrchr = %s\n", teststrchr);
 	}
-	if (pdest < psrc)
-	{
-		return (ft_memcpy(dest, src, n));
-	}
-	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			pdest[i - 1] = psrc[i - 1];
-			i--;
-		}
-		return (dest);
-	}
+	return (0);
 }

@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 14:04:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/05 14:13:33 by lulm             ###   ########.fr       */
+/*   Created: 2023/11/05 14:22:48 by lulm              #+#    #+#             */
+/*   Updated: 2023/11/05 14:31:56 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int ft_toupper(int c)
 {
-	int					i;
-	unsigned char		*pdest;
-	const unsigned char	*psrc;
-
-
-	pdest = (unsigned char *)dest;
-	psrc = (unsigned char *)src;
-	i = 0;
-	if (!dest || !src)
+	if (c >= 'a' && c <= 'z')
 	{
-		return (NULL);
-	}
-	if (pdest < psrc)
-	{
-		return (ft_memcpy(dest, src, n));
+		return (c - 32);
 	}
 	else
 	{
-		i = n;
-		while (i > 0)
-		{
-			pdest[i - 1] = psrc[i - 1];
-			i--;
-		}
-		return (dest);
+		return (c);
 	}
 }
