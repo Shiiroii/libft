@@ -6,13 +6,13 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:32:10 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/05 14:33:20 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/07 16:14:32 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
