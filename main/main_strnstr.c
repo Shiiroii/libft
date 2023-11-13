@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   main_strnstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 13:04:28 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/13 13:06:37 by lulm             ###   ########.fr       */
+/*   Created: 2023/11/13 14:04:00 by lulm              #+#    #+#             */
+/*   Updated: 2023/11/13 14:07:48 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	main()
 {
-	size_t	lendst;
-	size_t	i;
+	char	bigt[100] = "bonjour bonsoir il est actuellement";
+	char	littlet[100] = " bonsoir";
 
-	lendst = ft_strlen(dst);
-	i = 0;
-	if (lendst >= size)
-	{
-		return (size + ft_strlen(src));
-	}
-	while (src[i] != '\0' && lendst + i < size - 1)
-	{
-		dst[lendst + i] = src[i];
-		i++;
-	}
-	dst[i + lendst] = '\0';
-	return (lendst + ft_strlen(src));
+	printf("%s\n", bigt);
+	unsigned int	result = ft_strlcat(bigt, littlet, 100);
+	printf("%s\n return: %d", bigt, result);
+	return(0);
 }

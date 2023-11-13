@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:30:31 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/03 12:18:31 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/13 13:06:37 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t	u;
+	size_t	i;
 
-	u = 0;
-	while (str[u])
+	i = 0;
+	while (str[i])
 	{
-		u++;
+		i++;
 	}
-	return (u);
+	return (i);
 }
