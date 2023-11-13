@@ -6,7 +6,7 @@
 #    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/05 12:45:50 by lulm              #+#    #+#              #
-#    Updated: 2023/11/13 05:40:10 by lionelulm        ###   ########.fr        #
+#    Updated: 2023/11/13 05:53:44 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SOURCES = 	ft_atoi.c		\
 			ft_calloc.c		\
 			ft_strlcpy.c	\
 			ft_strlcat.c	\
+			ft_strncmp.c	\
 
 OBJS = (SOURCES: .c= .o)
 

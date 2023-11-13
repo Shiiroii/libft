@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 01:48:29 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/13 05:21:57 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/13 05:48:57 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	index = 0;
 	if (lendst >= size)
 	{
-		return(size + ft_strlen(src));
+		return (size + ft_strlen(src));
 	}
 	while (src[index] != '\0' && lendst + index < size - 1)
 	{
@@ -29,5 +29,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		index++;
 	}
 	dst[index + lendst] = '\0';
-	return(lendst + ft_strlen(src));
+	return (lendst + ft_strlen(src));
 }
