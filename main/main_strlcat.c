@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   main_strlcat.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 21:19:14 by lionelulm         #+#    #+#             */
+/*   Created: 2023/11/13 03:56:34 by lionelulm         #+#    #+#             */
 /*   Updated: 2023/11/13 05:27:25 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	main()
 {
-	unsigned int	index;
+	char	dst[100] = "bonjour bonsoir il est actuellement";
+	char	src[100] = " quatre heures du matin";
 
-	index = 0;
-	if (size == 0)
-	{
-		return (ft_strlen(src));
-	}
-	while (src[index] != '\0' && index < size - 1)
-	{
-		dst[index] = src[index];
-		index++;
-	}
-	dst[index] = '\0';
-	return (ft_strlen(src));
+	printf("%s\n", dst);
+	unsigned int	result = ft_strlcat(dst, src, 100);
+	printf("%s\n return: %d", dst, result);
+	return(0);
 }
