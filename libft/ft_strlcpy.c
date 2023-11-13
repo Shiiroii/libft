@@ -6,13 +6,13 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 21:19:14 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/13 01:45:02 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/13 01:46:24 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	unsigned int	i;
 
