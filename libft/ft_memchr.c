@@ -18,6 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned int	i;
 
 	scan = (unsigned char *)s;
+	i = 0;
 	while (i < n)
 	{
 		if (scan == (unsigned char *) c)
@@ -26,5 +27,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

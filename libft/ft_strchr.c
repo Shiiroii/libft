@@ -14,13 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	while (*s != '\0')
 	{
+		if (c == *s)
+		{
+			return ((char *)s);
+		}
 		s++;
 	}
-	if (c == *s)
+	if (c == '\0')
 	{
-		return ((char *)s);
+		return ((char *) s);
 	}
-	return (0);
+	return (NULL);
 }

@@ -18,13 +18,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*pdest;
 	const unsigned char	*psrc;
 
-	pdest = (unsigned char *)dest;
-	psrc = (unsigned char *)src;
 	i = 0;
 	if (!dest || !src)
 	{
 		return (NULL);
 	}
+	pdest = (unsigned char *)dest;
+	psrc = (unsigned char *)src;
 	if (pdest < psrc)
 	{
 		return (ft_memcpy(dest, src, n));
