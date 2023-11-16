@@ -6,13 +6,18 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:00:43 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/16 13:23:26 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/16 13:55:52 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*startofstr(char const *s1s, int i)
+{
+	i = 0;
+}
+
+char	*endofstr(char const *s1e, int i)
 {
 	i = 0;
 }
