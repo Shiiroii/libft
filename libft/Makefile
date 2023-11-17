@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+         #
+#    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/05 12:45:50 by lulm              #+#    #+#              #
-#    Updated: 2023/11/16 13:23:05 by lulm             ###   ########.fr        #
+#    Updated: 2023/11/17 05:47:16 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,4 +65,4 @@ fclean:	clean
 
 re:		fclean $(NAME)
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re
