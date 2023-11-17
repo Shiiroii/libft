@@ -3,34 +3,77 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:00:43 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/16 13:55:52 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/17 04:44:14 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*startofstr(char const *s1s, int i)
+int	to_find(char c, char *set)
 {
+	int	i;
+
 	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
 
-char	*endofstr(char const *s1e, int i)
+unsigned int	startofstr(char *s1, char *set)
 {
+	int	i;
+
 	i = 0;
+	while (s1[i])
+	{
+		if (to_find(s1[i], set) == 1)
+		{
+			break ;
+		}
+		i++;
+	}
+	return (i);
+}
+
+unsigned int	endofstr(char *s1, char *set)
+{
+	int	i;
+
+	i = ft_strlen(s1) - 1;
+	while(i > 0)
+	{
+		if (to_find(s1[i], set) == 1)
+		{
+			break;
+		}
+		i--;
+	}
+	return (i + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	i;
+	char	*setstr;
+	int	start;
+	int	end;
 
-	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
-	i = 0;
-	while (set[i] != s1[i])
+	if (!s1 || !set)
 	{
-
+		return (NULL);
 	}
+	str = (char *)s1;
+	setstr = (char *)set;
+	start = startofstr(str, setstr);
+	end = endofstr(str, setstr) - start;
+	return (ft_substr(str, start, end));
 }
