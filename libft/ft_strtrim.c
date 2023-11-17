@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:00:43 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/17 04:44:14 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/17 11:39:35 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ unsigned int	endofstr(char *s1, char *set)
 	int	i;
 
 	i = ft_strlen(s1) - 1;
-	while(i > 0)
+	while (i > 0)
 	{
 		if (to_find(s1[i], set) == 1)
 		{
-			break;
+			break ;
 		}
 		i--;
 	}
@@ -64,8 +64,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	char	*setstr;
-	int	start;
-	int	end;
+	int		start;
+	int		end;
 
 	if (!s1 || !set)
 	{
