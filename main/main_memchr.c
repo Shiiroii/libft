@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   main_memchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 16:26:49 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 03:02:37 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/11/18 02:54:24 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/11/18 03:03:26 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	unsigned char	*scan;
-	size_t			i;
+// gcc -Werror -Wextra -Wall ft_memchr.c ft_strlen.c
 
-	scan = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+int main()
+{
+	const char *str = "oui c'est la patate";
+	char	find_char = 'a';
+	size_t	length = ft_strlen(str);
+
+	const void *result = ft_memchr(str, find_char, length);
+
+	if (result != '\0')
 	{
-		if (scan[i] == (unsigned char)c)
-		{
-			return (scan + i);
-		}
-		i++;
+		printf("Found character '%c' at position %ld\n", find_char, (size_t)((char *)result - str));
 	}
-	return (NULL);
+	else
+	{
+		printf("Character '%c' not found in the string\n", find_char);
+	}
+	return 0;
 }

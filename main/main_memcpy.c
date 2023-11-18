@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   main_memcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 16:26:49 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 03:02:37 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/11/18 03:12:50 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/11/18 03:36:11 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main()
 {
-	unsigned char	*scan;
-	size_t			i;
+	char *src = "Coucou toi";
+	char dest[20];
 
-	scan = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (scan[i] == (unsigned char)c)
-		{
-			return (scan + i);
-		}
-		i++;
-	}
-	return (NULL);
+	size_t n = 3;
+	dest[n] = '\0';
+	ft_memcpy(dest, src, n);
+	printf("Source: %s\n", src);
+	printf("Dest: %s\n", dest);
+	return 0;
 }

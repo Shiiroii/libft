@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   main_memcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 16:26:49 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 03:02:37 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/11/18 03:05:03 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/11/18 03:09:13 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main()
 {
-	unsigned char	*scan;
-	size_t			i;
+	const char *str1 = "Coucou Patrick";
+	const char *str2 = "Coucou toi";
+	size_t n = 15;
 
-	scan = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	int result = ft_memcmp(str1, str2, n);
+	if (result == 0)
 	{
-		if (scan[i] == (unsigned char)c)
-		{
-			return (scan + i);
-		}
-		i++;
+		printf("%zu bytes are equal.\n", n);
 	}
-	return (NULL);
+	return 0;
 }
