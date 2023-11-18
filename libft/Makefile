@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
+#    By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/05 12:45:50 by lulm              #+#    #+#              #
-#    Updated: 2023/11/17 05:47:16 by lionelulm        ###   ########.fr        #
+#    Updated: 2023/11/18 14:45:41 by lulm             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,8 +48,7 @@ SOURCES = 	ft_atoi.c		\
 			ft_strtrim.c	\
 			ft_substr.c		\
 			ft_tolower.c	\
-			ft_toupper.c
-
+			ft_toupper.c	\
 
 OBJS = (SOURCES: .c= .o)
 

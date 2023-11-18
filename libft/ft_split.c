@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 02:46:04 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/18 14:40:32 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,15 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 
 	i = 0;
-	str = word_number((char *)s, c);
-	array = malloc(sizeof(char *) * (str + 1));
-	if (s == NULL)
-		return (NULL);
-	if (array == NULL)
+	array = malloc(sizeof(char *) * (str = word_number((char *)s, c) + 1));
+	if (s == NULL || array == NULL)
 		return (NULL);
 	while (i < str)
 	{
 		while (s[0] == c)
 			s++;
-		if ((array[i] = cpy_word((char *)s, c)) == NULL)
+		array[i] = cpy_word((char *)s, c);
+		if (array[i] == NULL)
 		{
 			while (i > 0)
 				free(array[i--]);
