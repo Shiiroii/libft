@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:04:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 14:50:45 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/18 16:24:18 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*psrc;
 
 	i = 0;
-	if (!dest && !src)
+	if (dest == NULL && src == NULL)
 	{
 		return (NULL);
 	}

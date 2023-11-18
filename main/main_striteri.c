@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main_striteri.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 14:30:31 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 16:08:36 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/11/18 16:49:51 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/11/18 17:02:05 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *str)
+void print_index_and_char(unsigned int i, char *c)
 {
-	size_t	i;
+	printf("index: %u, char: %c\n", i, *c);
+}
 
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
+int main()
+{
+	char str[] = "Coucou toi";
+
+	printf("debut: %s\n", str);
+	ft_striteri(str, &print_index_and_char);
+
+	return (0);
 }

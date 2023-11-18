@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:19:15 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 15:01:31 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/18 16:23:31 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	cdest = (char *)dest;
 	csrc = (char *)src;
-	if (src == NULL)
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	while (i < n)
 	{
