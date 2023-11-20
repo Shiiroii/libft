@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:26 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/20 13:13:27 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/20 15:04:36 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ size_t	length(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t		nbr;
-	int			len;
-	char		*str;
+	int		nbr;
+	int		len;
+	char	*str;
 
 	nbr = n;
 	len = length(nbr);
