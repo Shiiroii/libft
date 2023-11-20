@@ -6,17 +6,11 @@
 #    By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/05 12:45:50 by lulm              #+#    #+#              #
-#    Updated: 2023/11/18 14:45:41 by lulm             ###   ########.fr        #
+#    Updated: 2023/11/20 13:29:21 by lulm             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-CFLAGS = -Wall -Werror -Wextra
-
-CC = gcc
-
-RM = rm -rf
 
 SOURCES = 	ft_atoi.c		\
 			ft_bzero.c		\
@@ -33,6 +27,9 @@ SOURCES = 	ft_atoi.c		\
 			ft_memmove.c	\
 			ft_memset.c		\
 			ft_putchar_fd.c	\
+			ft_putendl_fd.c	\
+			ft_putnbr_fd.c	\
+			ft_putstr_fd.c	\
 			ft_split.c		\
 			ft_strchr.c		\
 			ft_strdup.c		\
@@ -50,18 +47,24 @@ SOURCES = 	ft_atoi.c		\
 			ft_tolower.c	\
 			ft_toupper.c	\
 
-OBJS = (SOURCES: .c= .o)
+CC			= @gcc
+
+CFLAGS		= -Wall -Werror -Wextra
+
+RM			= @rm -rf
+
+OBJS		= $(SOURCES:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
-clean:	rm -rf $(OBJS)
+clean:	$(RM) $(OBJS)
 
 fclean:	clean
-		rm -rf $(NAME)
+		$(RM) $(NAME)
 
-re:		fclean $(NAME)
+re:		fclean all
 
 .PHONY: all clean fclean re
