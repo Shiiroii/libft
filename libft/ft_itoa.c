@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:26 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/20 12:42:36 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/20 12:53:17 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	length(size_t n)
+size_t	length(int n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)
-		i = 1;
-	else if (n < 0)
+		return (1);
+	if (n < 0)
 	{
 		n = -n;
-		i++;
+		i += 1;
 	}
 	while (n > 0)
 	{
-		n = n / 10;
-		n++;
+		n /= 10;
+		i++;
 	}
 	return (i);
 }
