@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:15:45 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/17 12:13:59 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/20 14:34:13 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 		if (n > 9)
 		{
-			ft_putnbr_fd(n / 10, fd)
+			ft_putnbr_fd(n / 10, fd);
 		}
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
