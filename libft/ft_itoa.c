@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:26 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/20 12:36:58 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/20 12:42:36 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	length(size_t n)
 	return (i);
 }
 
-char	*ft_itoa(int n);
+char	*ft_itoa(int n)
 {
 	size_t		nbr;
 	int			len;
@@ -40,7 +40,7 @@ char	*ft_itoa(int n);
 
 	nbr = n;
 	len = length(nbr);
-	str = (char *)malloc(sizeof(char) * (length(n)));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
 	str[len--] = '\0';
@@ -55,7 +55,7 @@ char	*ft_itoa(int n);
 	}
 	while (nbr > 0)
 	{
-		str[i--] = (nbr % 0) + '0';
+		str[len--] = (nbr % 10) + '0';
 		nbr = nbr / 10;
 	}
 	return (str);
