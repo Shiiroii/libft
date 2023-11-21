@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/18 14:40:32 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/21 16:43:15 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 char	*cpy_word(char *str, char c)
 {
 	int		i;
+	int		len;
 	char	*array;
 
 	i = 0;
 	while (str[i] != '\0' && str[i] != c)
-	{
 		i++;
-	}
 	array = (char *)malloc(sizeof(char) * (i + 1));
 	if (array == NULL)
-	{
 		return (NULL);
-	}
 	ft_strlcpy(array, str, i + 1);
+	len = ft_strlen(array);
+	while (len > 0 && (array[len - 1] == '\n' || array[len - 1] == '\t'))
+		array[--len] = '\0';
 	return (array);
 }
 
@@ -62,16 +62,19 @@ int	word_number(char *str, char c)
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		str;
+	int		str_count;
 	char	**array;
 
 	i = 0;
-	array = malloc(sizeof(char *) * (str = word_number((char *)s, c) + 1));
-	if (s == NULL || array == NULL)
+	str_count = word_number((char *)s, c);
+	array = (char **)malloc(sizeof(char *) * (str_count + 1));
+	if (array == NULL || s == NULL)
 		return (NULL);
-	while (i < str)
+	while (*s == c)
+		s++;
+	while (i < str_count)
 	{
-		while (s[0] == c)
+		while (*s == c)
 			s++;
 		array[i] = cpy_word((char *)s, c);
 		if (array[i] == NULL)
@@ -84,6 +87,6 @@ char	**ft_split(char const *s, char c)
 		s += ft_strlen(array[i]);
 		i++;
 	}
-	array[i] = 0;
+	array[i] = NULL;
 	return (array);
 }

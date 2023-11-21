@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:09:48 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/20 16:11:37 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/21 14:50:50 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,25 @@
 int	ft_atoi(const char *nptr)
 {
 	int	resultat;
+	int	sign;
 	int	i;
-	int	u;
 
 	resultat = 0;
-	u = 0;
-	i = 1;
-	while ((nptr[u] == 32) || (nptr[u] >= 9 && nptr[u] <= 13))
+	sign = 1;
+	i = 0;
+	while ((nptr[i] == 32) || (nptr[i] >= 9 && (nptr[i] <= 13)))
+		i++;
+	if ((nptr[i] == '-') || (nptr[i] == '+'))
 	{
-		u++;
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
 	}
-	while ((nptr[u] == '-') || (nptr[u] == '+'))
-	{
-		if (nptr[u] == '-')
-			i *= -1;
-		u++;
-	}
-	while (nptr[u] && nptr[u] >= '0' && nptr[u] <= '9')
+	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		resultat *= 10;
-		resultat += nptr[u] - '0';
-		u++;
+		resultat += nptr[i] - '0';
+		i++;
 	}
-	resultat *= i;
-	return (resultat);
+	return (resultat * sign);
 }

@@ -6,27 +6,27 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:26 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/20 15:04:36 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/21 15:58:00 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	length(int n)
+int	length(long int n)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (n == 0)
-		return (1);
-	if (n < 0)
+		i = 1;
+	else if (n < 0)
 	{
 		n = -n;
-		i += 1;
+		i++;
 	}
 	while (n > 0)
 	{
-		n /= 10;
+		n = n / 10;
 		i++;
 	}
 	return (i);
@@ -34,13 +34,13 @@ size_t	length(int n)
 
 char	*ft_itoa(int n)
 {
-	int		nbr;
-	int		len;
-	char	*str;
+	int				len;
+	char			*str;
+	long int		nbr;
 
 	nbr = n;
 	len = length(nbr);
-	str = (char *)malloc(sizeof(char) * (length(nbr) + 1));
+	str = (char *)malloc (sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
 	str[len--] = '\0';
@@ -54,7 +54,7 @@ char	*ft_itoa(int n)
 	while (nbr > 0)
 	{
 		str[len--] = (nbr % 10) + '0';
-		nbr = nbr / 10;
+		nbr /= 10;
 	}
 	return (str);
 }
