@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/21 16:43:15 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/22 23:56:19 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,17 @@ int	word_number(char *str, char c)
 	return (word + nbr);
 }
 
+char	**free_split(char **array)
+{
+	int		i;
+
+	i = 0;
+	while (array[i])
+		free(array[i++]);
+	free(array);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -70,8 +81,6 @@ char	**ft_split(char const *s, char c)
 	array = (char **)malloc(sizeof(char *) * (str_count + 1));
 	if (array == NULL || s == NULL)
 		return (NULL);
-	while (*s == c)
-		s++;
 	while (i < str_count)
 	{
 		while (*s == c)
@@ -79,14 +88,13 @@ char	**ft_split(char const *s, char c)
 		array[i] = cpy_word((char *)s, c);
 		if (array[i] == NULL)
 		{
-			while (i > 0)
-				free(array[i--]);
-			free(array);
-			return (NULL);
+			return (free_split(array));
 		}
 		s += ft_strlen(array[i]);
 		i++;
 	}
+	while (*s == c)
+		s++;
 	array[i] = NULL;
 	return (array);
 }
