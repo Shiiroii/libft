@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:08:52 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/21 14:57:43 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/23 14:04:57 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	little_len = ft_strlen(little);
-	if (len == 0)
-		return (NULL);
 	if (*little == '\0')
 		return ((char *)big);
 	while (big[i] && i + little_len <= len)

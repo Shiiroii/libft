@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:34:04 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/20 15:36:14 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/23 14:59:38 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	char	chr;
+
+	chr = (char)c;
 	while (*s != '\0')
 	{
-		if (c == *s)
+		if (*s == chr)
 		{
 			return ((char *)s);
 		}
 		s++;
 	}
-	if (c == '\0')
+	if (chr == '\0')
 	{
-		return ((char *) s);
+		return ((char *)s);
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 04:22:56 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/20 16:06:31 by lulm             ###   ########.fr       */
+/*   Updated: 2023/11/23 14:51:26 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	end = (char *)malloc(sizeof(char) * (len + 1));
 	if (!end)
 		return (NULL);
