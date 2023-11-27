@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   main_calloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 02:10:40 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/27 12:12:16 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/11/24 23:16:32 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/11/24 23:28:52 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	*ft_calloc(size_t count, size_t size)
+int main()
 {
-	void	*p;
+	size_t count = 1431655766;
+	size_t size = 3;
+	char *arr = ft_calloc(count, size);
 
-	p = malloc(count * size);
-	if (p == NULL)
+	if (arr)
 	{
-		return (NULL);
+		printf("array\n");
+		free(arr);
 	}
-	ft_bzero(p, (count * size));
-	return (p);
+	else
+		printf("error\n");
+	return (0);
 }

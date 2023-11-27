@@ -3,21 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+         #
+#    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/05 12:45:50 by lulm              #+#    #+#              #
-#    Updated: 2023/11/20 15:02:39 by lulm             ###   ########.fr        #
+#    Updated: 2023/11/24 22:37:55 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = libft.a
 
-CC			= gcc
+CC		= gcc
 
-CFLAGS		= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra
 
-RM			= rm -f
+RM		= rm -f
 
 SRCS =	ft_atoi.c		\
 		ft_bzero.c		\
