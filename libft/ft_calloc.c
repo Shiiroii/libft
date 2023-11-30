@@ -6,21 +6,25 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 02:10:40 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/11/27 12:12:16 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/11/29 20:51:32 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*p;
+	void	*ptr;
+	size_t	test;
 
-	p = malloc(count * size);
-	if (p == NULL)
+	test = nmemb * size;
+	if (size && nmemb && test / nmemb != size)
+		return (NULL);
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	ft_bzero(p, (count * size));
-	return (p);
+	ft_bzero(ptr, (nmemb * size));
+	return (ptr);
 }
