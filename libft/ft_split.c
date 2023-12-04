@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:14:16 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/22 23:56:19 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/12/04 11:48:23 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	str_count = word_number((char *)s, c);
 	array = (char **)malloc(sizeof(char *) * (str_count + 1));
 	if (array == NULL || s == NULL)
@@ -87,9 +89,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		array[i] = cpy_word((char *)s, c);
 		if (array[i] == NULL)
-		{
 			return (free_split(array));
-		}
 		s += ft_strlen(array[i]);
 		i++;
 	}

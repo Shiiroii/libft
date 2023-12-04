@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_striteri.c                                    :+:      :+:    :+:   */
+/*   main_itoa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 16:49:51 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/12/04 10:58:32 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/12/04 10:44:17 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/12/04 10:45:51 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void print_index_and_char(unsigned int i, char *c)
-{
-	printf("index: %u, char: %c\n", i, *c);
-}
+int main() {
+	int		num;
+	char	*result;
 
-int main()
-{
-	char str[] = "Coucou toi";
-
-	printf("debut: %s\n", str);
-	ft_striteri(str, &print_index_and_char);
-
+	num = 12345;
+	result = ft_itoa(num);
+	if (result != NULL)
+	{
+		printf("int : %d\n", num);
+		printf("str : %s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("error\n");
+	}
 	return (0);
 }

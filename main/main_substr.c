@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_striteri.c                                    :+:      :+:    :+:   */
+/*   main_substr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 16:49:51 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/12/04 10:58:32 by lionelulm        ###   ########.fr       */
+/*   Created: 2023/12/04 11:07:39 by lionelulm         #+#    #+#             */
+/*   Updated: 2023/12/04 11:13:30 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void print_index_and_char(unsigned int i, char *c)
-{
-	printf("index: %u, char: %c\n", i, *c);
-}
-
 int main()
 {
-	char str[] = "Coucou toi";
+	const char		*str1;
+	unsigned int	start1;
+	size_t			len1;
+	char			*substr1;
 
-	printf("debut: %s\n", str);
-	ft_striteri(str, &print_index_and_char);
-
-	return (0);
+	str1 = "Coucou";
+	start1 = 4;
+	len1 = 6;
+	substr1 = ft_substr(str1, start1, len1);
+	printf("original : \"%s\", substr : \"%s\"\n", str1, substr1);
+	free(substr1);
+	return 0;
 }
