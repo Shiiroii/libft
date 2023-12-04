@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 02:10:40 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/12/04 12:09:16 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/12/04 12:31:23 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	test = nmemb * size;
 	if (size && nmemb && test / nmemb != size)
 		return (NULL);
-	ptr = malloc(nmemb * size);
+	ptr = malloc(test);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	ft_bzero(ptr, (nmemb * size));
+	ft_bzero(ptr, (test));
 	return (ptr);
 }
