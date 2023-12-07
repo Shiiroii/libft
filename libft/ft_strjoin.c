@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:01:21 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/12/04 12:09:57 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/12/07 08:08:56 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	size_t	s1l;
 	size_t	s2l;
-
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
