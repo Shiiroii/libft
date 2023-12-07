@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main_calloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 23:16:32 by lionelulm         #+#    #+#             */
-/*   Updated: 2023/12/04 12:31:07 by lionelulm        ###   ########.fr       */
+/*   Updated: 2023/12/07 09:20:05 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int main()
 {
@@ -46,20 +46,17 @@ int main()
 
 //ikar's version :
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <unistd.h>
-#include <limits.h>
-
 int main()
 {
 	size_t c = 18446744073709551615UL / 3 + 1;
 	size_t s = 3;
 	size_t x = c * s;
-	char *p = calloc(c, s);
+	char *p = ft_calloc(c, s);
+	char *r = calloc(c, s);
 	printf("c * s    %lu\n", x);
 	printf("SIZE_MAX %lu\n", SIZE_MAX);
 	printf("address  %p\nerrno    %d\n", p, errno);
+	printf("address  %p\nerrno    %d\n", r, errno);
 	free(p);
+	free(r);
 }

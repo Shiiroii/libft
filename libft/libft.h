@@ -6,7 +6,7 @@
 /*   By: lulm <lulm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:12:53 by lulm              #+#    #+#             */
-/*   Updated: 2023/11/17 12:14:01 by lulm             ###   ########.fr       */
+/*   Updated: 2023/12/07 09:31:33 by lulm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <stddef.h>
 # include <string.h>
 # include <stdio.h>
+# include <stdint.h>
+# include <limits.h>
+# include <errno.h>
 # include "libft.h"
 
 int		ft_atoi(const char *nptr);
