@@ -19,10 +19,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	test = nmemb * size;
 	if (size && nmemb && (test / nmemb != size))
+	{
 		return (NULL);
+	}
 	ptr = malloc(test);
 	if (ptr == NULL)
+	{
 		return (NULL);
+	}
 	ft_bzero(ptr, (test));
 	return (ptr);
 }
