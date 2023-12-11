@@ -20,9 +20,7 @@ int	to_find(char c, char *set)
 	while (set[i])
 	{
 		if (set[i] == c)
-		{
 			return (0);
-		}
 		i++;
 	}
 	return (1);
@@ -36,9 +34,7 @@ unsigned int	startofstr(char *s1, char *set)
 	while (s1[i])
 	{
 		if (to_find(s1[i], set) == 1)
-		{
 			break ;
-		}
 		i++;
 	}
 	return (i);
@@ -52,9 +48,7 @@ unsigned int	endofstr(char *s1, char *set)
 	while (i > 0)
 	{
 		if (to_find(s1[i], set) == 1)
-		{
 			break ;
-		}
 		i--;
 	}
 	return (i + 1);
@@ -68,9 +62,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 
 	if (!s1 || !set)
-	{
 		return (NULL);
-	}
 	str = (char *)s1;
 	setstr = (char *)set;
 	start = startofstr(str, setstr);
