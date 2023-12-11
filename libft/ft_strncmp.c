@@ -24,9 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		chars1 = (unsigned char)s1[i];
 		chars2 = (unsigned char)s2[i];
 		if (chars1 != chars2)
-		{
 			return (chars1 - chars2);
-		}
 		i++;
 	}
 	return (0);
