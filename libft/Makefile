@@ -6,7 +6,7 @@
 #    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/05 12:45:50 by lulm              #+#    #+#              #
-#    Updated: 2023/11/24 22:37:55 by lionelulm        ###   ########.fr        #
+#    Updated: 2024/03/31 15:19:05 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ SRCS =	ft_atoi.c		\
 		ft_strtrim.c	\
 		ft_substr.c		\
 		ft_tolower.c	\
-		ft_toupper.c
+		ft_toupper.c	\
+		ft_nofile.c
 
 OBJS		= $(SRCS:.c=.o)
 
