@@ -1,45 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 10:41:51 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/16 14:57:43 by liulm            ###   ########.fr       */
+/*   Created: 2024/10/16 12:03:59 by liulm             #+#    #+#             */
+/*   Updated: 2024/10/16 14:57:45 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t				len;
 	unsigned char		*tempdest;
 	const unsigned char	*tempsrc;
 
 	len = 0;
-	tempdest = (unsigned char *)dest;
-	tempsrc = (const unsigned char *)src;
 	if (dest == NULL && src == NULL)
 		return (NULL);
-	while (len < n)
+	tempdest = (unsigned char *)dest;
+	tempsrc = (const unsigned char *)src;
+	if (tempdest < tempsrc)
+		return (ft_memcpy(dest, src, n));
+	else
 	{
-		tempdest[len] = tempsrc[len];
-		len++;
+		while (len < n)
+		{
+			tempdest[len] = tempsrc[len];
+			len++;
+		}
 	}
 	return (dest);
 }
 
 // #include <stdio.h>
+// #include <string.h>
 
-// int main()
+// int	main(void)
 // {
-// 	const char *src = "Coucou toi";
-// 	char dest[20];
+// 	char	*dest[50];
+// 	char	*src = "Salut Salut";
+// 	char	*dest2[50];
+// 	char	*src2 = "Salut Salut";
 
-// 	ft_memcpy(dest, src, 3);
-// 	printf("Source: %s\n", src);
-// 	printf("Dest: %s\n", dest);
-// 	return (0);
+// 	memmove(dest, src, 4);
+// 	printf("%s | %s\n", src, (char *)dest);
+// 	ft_memmove(dest2, src2, 4);
+// 	printf("%s | %s\n", src, (char *)dest);
 // }

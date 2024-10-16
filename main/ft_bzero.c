@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:21:04 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/16 10:41:13 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/16 14:54:32 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ void	ft_bzero(void *s, size_t n)
 	ft_memset(s, 0, n);
 }
 
-int	main()
-{
-	char	str[50] = "Salut comment ca va";
-	char	str2[50] = "Salut comment ca va";
+// int	main()
+// {
+// 	char	str[50] = "Salut comment ca va";
+// 	char	str2[50] = "Salut comment ca va";
 
-	printf("Avant: %s\n", str);
-	ft_bzero(str, 1);
-	printf("Apres: %s\n", str);
-	printf("Avant: %s\n", str2);
-	bzero(str2, 1);
-	printf("Apres: %s", str2);
-	return (0);
-}
+// 	printf("Avant: %s\n", str);
+// 	ft_bzero(str, 1);
+// 	printf("Apres: %s\n", str);
+// 	printf("Avant: %s\n", str2);
+// 	bzero(str2, 1);
+// 	printf("Apres: %s", str2);
+// 	return (0);
+// }
