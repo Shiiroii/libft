@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:39:49 by lionelulm         #+#    #+#             */
-/*   Updated: 2024/10/17 17:59:10 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/10/17 18:00:03 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 
 }
-zv rarfa
