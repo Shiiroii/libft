@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:51:00 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/17 16:02:30 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/18 11:45:00 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int	main()
-{
-	char	*str = "Salut";
-	char	*str2 = "Salvt";
+// int	main()
+// {
+// 	char	*str = "Salut";
+// 	char	*str2 = "Salvt";
 
-	printf("ft_strncmp : %d\n", ft_strncmp(str, str2, 4));
-	printf("strncmp : %d", strncmp(str, str2, 4));
-	return (0);
-}
+// 	printf("ft_strncmp : %d\n", ft_strncmp(str, str2, 4));
+// 	printf("strncmp : %d", strncmp(str, str2, 4));
+// 	return (0);
+// }

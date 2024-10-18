@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:18:19 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/18 11:42:42 by liulm            ###   ########.fr       */
+/*   Created: 2024/10/18 11:09:25 by liulm             #+#    #+#             */
+/*   Updated: 2024/10/18 11:42:53 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	len_little;
+	size_t	i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-size_t	ft_strlen(const char *str);
-void	*ft_memset(void *s, int c, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-
-#endif
+	len_little = ft_strlen(little);
+	i = 0;
+	if (*little == '\0')
+		return ((char *)big);
+	while (big[i] && len_little <= len)
+	{
+		if ((ft_strncmp(big + i, little, len_little)))
+			return ((char *)(big + i));
+		i++;
+	}
+	return (NULL);
+}
