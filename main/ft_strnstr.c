@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:09:25 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/18 11:46:02 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/18 12:47:30 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,22 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (*little == '\0')
 		return ((char *)big);
-	while (big[i] && len_little <= len)
+	while (big[i] && (len_little + i) <= len)
 	{
-		if ((ft_strncmp(big + i, little, len_little)))
+		if (ft_strncmp(big + i, little, len_little) == 0)
 			return ((char *)(big + i));
 		i++;
 	}
 	return (NULL);
 }
 
-# include <string.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main()
-{
-	char	*ft;
-	char	*example;
+// int	main()
+// {
+// 	char	*ft;
 
-	ft = ft_strnstr("Salut", "Salut", 40);
-	printf("ft_strnstr: %s\n", ft);
-	printf("strnstr: %s\n", example);
-	return(0);
-}
+// 	ft = ft_strnstr("Salut", "al", 40);
+// 	printf("ft_strnstr: %s\n", ft);
+// 	return(0);
+// }

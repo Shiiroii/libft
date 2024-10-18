@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:08:35 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/17 15:16:00 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/18 13:19:23 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main()
-{
-	printf("%d", ft_toupper('a'));
-	return (0);
-}
+// int	main()
+// {
+// 	printf("%d", ft_toupper('a'));
+// 	return (0);
+// }

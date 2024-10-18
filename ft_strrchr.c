@@ -6,13 +6,13 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:35:53 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/17 15:41:08 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/18 13:17:23 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c)
 {
 	char	chr;
 	char	*temp_str;
@@ -29,4 +29,3 @@ char	*ft_strrchr(const char *s, int c);
 	}
 	return (NULL);
 }
-

@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:35:53 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/17 15:50:48 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/18 13:19:42 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,15 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int	main()
-{
-	char	*str = "Coucou";
-	char	c = 'o';
+// int	main()
+// {
+// 	char	*str = "Coucou";
+// 	char	c = 'o';
 
-	printf("ft_strrchr : %s\n", ft_strrchr(str, c));
-	printf("strrchr : %s", strrchr(str, c));
-	return (0);
-}
-
+// 	printf("ft_strrchr : %s\n", ft_strrchr(str, c));
+// 	printf("strrchr : %s", strrchr(str, c));
+// 	return (0);
+// }

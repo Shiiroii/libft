@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 15:11:28 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/18 13:19:17 by liulm            ###   ########.fr       */
+/*   Created: 2024/10/18 13:11:23 by liulm             #+#    #+#             */
+/*   Updated: 2024/10/18 13:22:12 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-int	ft_tolower(int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	void	*ptr;
+	size_t	test;
+
+	test = nmemb * size;
+	if (size && nmemb && (test / nmemb != size))
+		return (NULL);
+	ptr = malloc(test);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, (test));
+	return (ptr);
 }
-
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	printf("%d", ft_tolower('A'));
-// 	return (0);
-// }

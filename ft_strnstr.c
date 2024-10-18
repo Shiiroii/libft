@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:09:25 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/18 11:42:53 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/18 12:47:41 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (*little == '\0')
 		return ((char *)big);
-	while (big[i] && len_little <= len)
+	while (big[i] && (len_little + i) <= len)
 	{
-		if ((ft_strncmp(big + i, little, len_little)))
+		if (ft_strncmp(big + i, little, len_little) == 0)
 			return ((char *)(big + i));
 		i++;
 	}
