@@ -6,18 +6,19 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:21:04 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/16 14:54:32 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/22 12:56:33 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
-#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
+
+// #include <stdio.h>
+// #include <strings.h>
 
 // int	main()
 // {

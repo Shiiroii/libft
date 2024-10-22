@@ -6,13 +6,11 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:33:56 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/15 14:47:40 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/22 12:54:58 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -29,6 +27,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+// #include <stdio.h>
 
 // int	main()
 // {

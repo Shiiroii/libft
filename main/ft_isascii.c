@@ -6,20 +6,20 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:46:16 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/16 14:54:24 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/22 12:57:26 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
+
+// #include <stdio.h>
 
 // int	main()
 // {
