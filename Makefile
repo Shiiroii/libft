@@ -6,7 +6,7 @@
 #    By: liulm <liulm@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 14:04:19 by liulm             #+#    #+#              #
-#    Updated: 2024/10/21 16:20:21 by liulm            ###   ########.fr        #
+#    Updated: 2024/10/22 15:51:29 by liulm            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,10 +44,10 @@ SRCS =	ft_isalnum.c			\#
 		ft_strdup.c				\#
 		ft_substr.c				\#
 		ft_strjoin.c			\#
-		ft_strtrim.c			\
-		ft_split.c				\
-		ft_itoa.c				\
-		ft_strmapi.c			\
+		ft_strtrim.c			\#
+		ft_split.c				\#
+		ft_itoa.c				\#
+		ft_strmapi.c			\#
 		ft_striteri.c			\
 		ft_putchar_fd.c			\
 		ft_putstr_fd.c			\

@@ -1,31 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 13:39:47 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/22 11:54:39 by liulm            ###   ########.fr       */
+/*   Created: 2024/10/22 15:16:54 by liulm             #+#    #+#             */
+/*   Updated: 2024/10/22 15:29:49 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int	len_of_int(long int n)
 {
-	char	*str;
-	size_t	i;
+	int	i;
 
-	str = (char *)malloc((sizeof(char) * ft_strlen(s)) + 1);
 	i = 0;
-	if (str == NULL)
-		return (NULL);
-	while (s[i])
+	if (n == 0)
+		i = 1;
+	else if (n < 0)
 	{
-		str[i] = s[i];
+		n = -n;
 		i++;
 	}
-	str[i] = '\0';
+	while (n > 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	int			len;
+	long int	nbr;
+	char		*str;
+
+	nbr = n;
+	len = len_of_int(nbr);
+	str = (char *)malloc (sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	str[len--] = '\0';
+	if (nbr == 0)
+		str[0] = '0';
+	if (nbr < 0)
+	{
+		str[0] = '-';
+		nbr = -nbr;
+	}
+	while (nbr > 0)
+	{
+		str[len--] = (nbr % 10) + '0';
+		nbr /= 10;
+	}
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:10:40 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/22 11:45:34 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/22 12:54:18 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = start_of_str(str, set_str);
 	end = end_of_str(str, set_str) - start;
 	return (ft_substr(str, start, end));
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	printf("%s", ft_strtrim("Salut a tous comment ca fart haha", "a"));
-	return (0);
 }
