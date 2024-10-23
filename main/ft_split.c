@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:49:14 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/22 15:16:22 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/23 14:11:41 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,6 @@ char	**ft_split(char const *s, char c)
 // 	int		i = 0;
 // 	char	str[35] = "Salut a tous et a toutes";
 // 	char	**result = ft_split(str, ' ');
-
 
 // 	while (result[i] != NULL)
 // 	{
