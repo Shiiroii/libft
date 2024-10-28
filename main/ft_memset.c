@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:33:56 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/22 12:54:58 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/28 16:15:29 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memset(void *s, int c, size_t n)
 }
 
 // #include <stdio.h>
+// #include <string.h>
 
 // int	main()
 // {
