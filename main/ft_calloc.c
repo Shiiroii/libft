@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:11:23 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/21 13:57:09 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/28 12:55:52 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 	char *r = calloc(c, s);
 // 	printf("c * s    %lu\n", x);
 // 	printf("SIZE_MAX %lu\n", SIZE_MAX);
-// 	printf("address  %p\nerrno    %d\n", p, errno);
+// 	printf("address ft  %p\nerrno ft    %d\n", p, errno);
 // 	printf("address  %p\nerrno    %d\n", r, errno);
 // 	free(p);
 // 	free(r);

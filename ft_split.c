@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:49:14 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/23 13:20:04 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/10/24 12:59:58 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,10 @@ char	*sep_words(char *s, char c)
 	ft_strlcpy(temp, s, i + 1);
 	len = ft_strlen(temp);
 	while (len > 0 && (temp[len - 1] == '\n' || temp[len - 1] == '\t'))
-		temp[--len] = '\0';
+	{
+		--len;
+		temp[len] = '\0';
+	}
 	return (temp);
 }
 

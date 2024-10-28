@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:57:59 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/23 17:06:01 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/10/23 17:27:38 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		len_src++;
 	}
 	dst[len_dst + len_src] = '\0';
-	return (len_dst + len_src);
+	return (len_dst + ft_strlen(src));
 }

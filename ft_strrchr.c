@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:35:53 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/23 17:07:25 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/10/23 17:53:02 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 			return (temp_str + len);
 		len--;
 	}
+	if (chr == '\0')
+		return ((char *)s);
 	return (NULL);
 }

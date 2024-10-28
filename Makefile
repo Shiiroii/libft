@@ -6,7 +6,7 @@
 #    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 14:04:19 by liulm             #+#    #+#              #
-#    Updated: 2024/10/23 17:03:19 by lionelulm        ###   ########.fr        #
+#    Updated: 2024/10/23 17:15:16 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS	=	ft_isalnum.c		\
 			ft_strrchr.c		\
 			ft_strncmp.c		\
 			ft_memchr.c			\
+			ft_memcmp.c			\
 			ft_strnstr.c		\
 			ft_atoi.c			\
 			ft_calloc.c			\
