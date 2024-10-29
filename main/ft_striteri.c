@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:51:47 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/23 14:13:11 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/10/29 15:11:06 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 // void	printouf(unsigned int i, char *s)
 // {
-// 	printf("index: %d, string: %c\n", i, *s);
+// 	printf("%u %s", i, s);
 // }
 
 // int	main()
 // {
-// 	char	*str = "";
-// 	printf("debut: %s\n", str);
+// 	char	*str = "Salut";
+
 // 	ft_striteri(str, &printouf);
 // 	return (0);
 // }
