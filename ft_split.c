@@ -6,13 +6,13 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:49:14 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/24 12:59:58 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/10/30 21:50:15 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char *s, char c)
+static size_t	count_words(char *s, char c)
 {
 	size_t	i;
 	size_t	num;
@@ -40,7 +40,7 @@ size_t	count_words(char *s, char c)
 	return (word + num);
 }
 
-char	*sep_words(char *s, char c)
+static char	*sep_words(char *s, char c)
 {
 	int		i;
 	int		len;
@@ -62,7 +62,7 @@ char	*sep_words(char *s, char c)
 	return (temp);
 }
 
-char	**free_split(char **array)
+static char	**free_split(char **array)
 {
 	int	i;
 

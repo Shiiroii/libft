@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:10:40 by liulm             #+#    #+#             */
-/*   Updated: 2024/10/22 12:54:18 by liulm            ###   ########.fr       */
+/*   Updated: 2024/10/30 21:50:41 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	chars_to_find(char c, char *set)
+static int	chars_to_find(char c, char *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	chars_to_find(char c, char *set)
 	return (1);
 }
 
-unsigned int	start_of_str(char *s1, char *set)
+static unsigned int	start_of_str(char *s1, char *set)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ unsigned int	start_of_str(char *s1, char *set)
 	return (i);
 }
 
-unsigned int	end_of_str(char *s1, char *set)
+static unsigned int	end_of_str(char *s1, char *set)
 {
 	int	i;
 
